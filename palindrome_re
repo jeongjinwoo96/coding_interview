@@ -1,0 +1,14 @@
+import time,re
+
+s="a man, a plan, a canal:Panama"
+start_time = time.time()
+def isPalindrome(s:str)->bool:
+	s = s.lower()
+	s=re.sub('[^a-z0-9]','',s)
+	return s==s[::-1]
+
+
+
+print(isPalindrome(s))
+end_time = time.time()
+print(end_time-start_time)
